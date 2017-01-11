@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>小學數學地圖</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list inset>
+    <ion-card *ngFor = "let n of [0,1,2,3,4,5]" (tap)="tapEvent($event,n)" (swipe)="swipeEvent($event,n)">
+      <ion-item>
+        <img [ngClass]="{'big': taps[n] == 1, 
+                        'left': dirHs[n] == -1, 'right': dirHs[n] == 1}"
+             [src]="'http://math.alearn.org.tw/%E5%AD%B8%E7%BF%92%E5%9C%B0%E5%9C%96/%E5%B0%8F%E5%AD%B8%E6%95%B8%E5%AD%B8%E5%9C%B0%E5%9C%96/p' + n + '.jpg'"/>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+</ion-content>
