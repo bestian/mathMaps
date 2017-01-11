@@ -18,4 +18,5 @@
         npm install
 
 4. 用瀏覽器測試
+
         ionic serve
