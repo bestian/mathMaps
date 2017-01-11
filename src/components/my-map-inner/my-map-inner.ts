@@ -1,16 +1,24 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+/*
+  Generated class for the MyMapInner component.
 
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+*/
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'my-map-inner',
+  templateUrl: 'my-map-inner.html'
 })
-export class HomePage {
+export class MyMapInnerComponent {
 
-  constructor(public navCtrl: NavController) {
+  text: string;
+
+  constructor() {
+    console.log('Hello MyMapInner Component');
+    this.text = 'Hello World';
   }
-
+  
   private taps = [0,0,0,0,0,0];
   private dirHs = [0,0,0,0,0,0];
   private dirVs = [0,0,0,0,0,0];
@@ -29,19 +37,19 @@ export class HomePage {
     this.taps[n]++;
     this.taps[n] = this.taps[n] % 2;
     if(this.taps[n] == 0) {
-    	this.dirHs[n] = 0
+      this.dirHs[n] = 0
     }
   }
 
   swipeEvent(e, n) {
-  	//console.log(e)
+    //console.log(e)
     if (e.direction == 2 && this.dirHs[n] > -1) {
         //direction 2 = right to left swipe.
-    	this.dirHs[n]--;
+      this.dirHs[n]--;
     }
     if (e.direction == 4 && this.dirHs[n] < 2) {
         //direction 4 = left to right swipe.
-    	this.dirHs[n]++;
+      this.dirHs[n]++;
     }
   }
 
@@ -51,4 +59,5 @@ export class HomePage {
     this.myLeft = e.center.x - 600;
     //...
   }
+
 }

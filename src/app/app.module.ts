@@ -3,8 +3,10 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/elementary/elementary';
 import { TabsPage } from '../pages/tabs/tabs';
+
+import { MyMapInnerComponent } from '../components/my-map-inner/my-map-inner';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    MyMapInnerComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
