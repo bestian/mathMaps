@@ -5,8 +5,16 @@
 </ion-header>
 
 <ion-content>
+  <div class="focus-circle"
+  [ngStyle]="{'top': myTop+'px', 'left': myLeft+'px'}"
+  [hidden]="!isStrong"
+  (tap)="circleTapEvent($event)"
+  (press)="pressEvent($event,n)"></div>
   <ion-list inset>
-    <ion-card *ngFor = "let n of [0,1,2,3,4,5]" (tap)="tapEvent($event,n)" (swipe)="swipeEvent($event,n)" (press)="pressEvent($event,n)">
+    <ion-card *ngFor = "let n of [0,1,2,3,4,5]"
+    (tap)="tapEvent($event,n)"
+    (swipe)="swipeEvent($event,n)"
+    (press)="pressEvent($event,n)">
       <ion-item>
         <img [ngClass]="{'big': taps[n] == 1, 
                         'left': dirHs[n] == -1, 'right': dirHs[n] == 1}"

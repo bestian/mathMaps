@@ -11,11 +11,18 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
   }
 
-  public taps = [0,0,0,0,0,0];
-  public dirHs = [0,0,0,0,0,0];
-  public dirVs = [0,0,0,0,0,0];
-  public isStrong = false;
-  public strongCenter = {x:0, y:0};
+  private taps = [0,0,0,0,0,0];
+  private dirHs = [0,0,0,0,0,0];
+  private dirVs = [0,0,0,0,0,0];
+  private isStrong = false;
+  private strongCenter = {x:0, y:0};
+  private myTop: number;
+  private myLeft: number;
+
+
+  circleTapEvent(e) {
+    this.isStrong = false;
+  }
 
   tapEvent(e, n) {
     this.isStrong = false;
@@ -40,11 +47,8 @@ export class HomePage {
 
   pressEvent(e,n) {
     this.isStrong = true;
-    console.log(e)
-    var x = e.center.x;
-    var y = e.center.y;
-    console.log(x);
-    console.log(y);
+    this.myTop = e.center.y - 600;
+    this.myLeft = e.center.x - 600;
     //...
   }
 }
