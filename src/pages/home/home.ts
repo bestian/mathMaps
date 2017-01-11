@@ -14,8 +14,11 @@ export class HomePage {
   public taps = [0,0,0,0,0,0];
   public dirHs = [0,0,0,0,0,0];
   public dirVs = [0,0,0,0,0,0];
+  public isStrong = false;
+  public strongCenter = {x:0, y:0};
 
   tapEvent(e, n) {
+    this.isStrong = false;
     this.taps[n]++;
     this.taps[n] = this.taps[n] % 2;
     if(this.taps[n] == 0) {
@@ -33,5 +36,15 @@ export class HomePage {
         //direction 4 = left to right swipe.
     	this.dirHs[n]++;
     }
+  }
+
+  pressEvent(e,n) {
+    this.isStrong = true;
+    console.log(e)
+    var x = e.center.x;
+    var y = e.center.y;
+    console.log(x);
+    console.log(y);
+    //...
   }
 }
