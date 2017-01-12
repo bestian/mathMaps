@@ -9,16 +9,20 @@
   [ngStyle]="{'top': myTop+'px', 'left': myLeft+'px'}"
   [hidden]="!isStrong"
   (tap)="circleTapEvent($event)"
-  (press)="pressEvent($event,n)"></div>
+  (press)="pressEvent($event,n)"
+  (pinch)="pinchEvent($event,n)"></div>
   <ion-list inset>
-    <ion-card *ngFor = "let n of [0,1,2,3,4,5]"
+    <ion-card *ngFor = "let n of [0,1,2,3,4,5]; let i = index"
     (tap)="tapEvent($event,n)"
     (swipe)="swipeEvent($event,n)"
     (press)="pressEvent($event,n)">
-      <ion-item>
+      <ion-card-header>
+        {{sectionTitles[i]}}
+      </ion-card-header>
+      <ion-card-content>
         <img [ngClass]="{'big': taps[n] == 1, 
                         'left': dirHs[n] == -1, 'right': dirHs[n] == 1}"
              [src]="dataDir + school + '/p' + n + '.jpg'"/>
-      </ion-item>
+      </ion-card-content>
     </ion-card>
  </ion-list>

@@ -26,10 +26,20 @@ export class MyMapInnerComponent {
   private strongCenter = {x:0, y:0};
   private myTop: number;
   private myLeft: number;
-  private topicTitles = ['說明',0,0,0,0,0,0];
+  private sectionTitles = 
+    ['說明',
+     '數與計算',
+     '數感量感',
+     '幾何推理',
+     '解題策略',
+     '備課要點'];
 
 
   circleTapEvent(e) {
+    this.isStrong = false;
+  }
+
+  pinchEvent(e) {
     this.isStrong = false;
   }
 
