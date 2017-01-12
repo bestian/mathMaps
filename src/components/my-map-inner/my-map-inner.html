@@ -18,7 +18,7 @@
       <ion-item>
         <img [ngClass]="{'big': taps[n] == 1, 
                         'left': dirHs[n] == -1, 'right': dirHs[n] == 1}"
-             [src]="'http://math.alearn.org.tw/%E5%AD%B8%E7%BF%92%E5%9C%B0%E5%9C%96/%E5%B0%8F%E5%AD%B8%E6%95%B8%E5%AD%B8%E5%9C%B0%E5%9C%96/p' + n + '.jpg'"/>
+             [src]="dataDir + school + '/p' + n + '.jpg'"/>
       </ion-item>
     </ion-card>
  </ion-list>

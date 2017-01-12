@@ -1,9 +1,13 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/elementary/elementary';
+
+
+import { IntroPage } from '../pages/intro/intro';
+import { ElementaryPage } from '../pages/elementary/elementary';
+import { JoniorPage } from '../pages/junior/junior';
+import { SeniorPage } from '../pages/senior/senior';
+
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { MyMapInnerComponent } from '../components/my-map-inner/my-map-inner';
@@ -11,9 +15,10 @@ import { MyMapInnerComponent } from '../components/my-map-inner/my-map-inner';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    IntroPage,
+    ElementaryPage,
+    JoniorPage,
+    SeniorPage,
     TabsPage,
     MyMapInnerComponent
   ],
@@ -23,9 +28,10 @@ import { MyMapInnerComponent } from '../components/my-map-inner/my-map-inner';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    IntroPage,
+    ElementaryPage,
+    JoniorPage,
+    SeniorPage,
     TabsPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]

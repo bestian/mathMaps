@@ -11,7 +11,7 @@ import { MyMapInnerComponent } from '../../components/my-map-inner/my-map-inner'
 })
 
 
-export class HomePage {
+export class ElementaryPage {
 
   constructor(public navCtrl: NavController) {
   }

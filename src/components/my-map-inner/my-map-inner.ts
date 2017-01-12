@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 /*
   Generated class for the MyMapInner component.
@@ -11,14 +11,14 @@ import { Component } from '@angular/core';
   templateUrl: 'my-map-inner.html'
 })
 export class MyMapInnerComponent {
-
-  text: string;
+  @Input('focus') school = '%E5%B0%8F%E5%AD%B8%E6%95%B8%E5%AD%B8%E5%9C%B0%E5%9C%96';
+  
+  private dataDir = 'http://math.alearn.org.tw/%E5%AD%B8%E7%BF%92%E5%9C%B0%E5%9C%96/';
 
   constructor() {
     console.log('Hello MyMapInner Component');
-    this.text = 'Hello World';
   }
-  
+
   private taps = [0,0,0,0,0,0];
   private dirHs = [0,0,0,0,0,0];
   private dirVs = [0,0,0,0,0,0];
@@ -26,6 +26,7 @@ export class MyMapInnerComponent {
   private strongCenter = {x:0, y:0};
   private myTop: number;
   private myLeft: number;
+  private topicTitles = ['說明',0,0,0,0,0,0];
 
 
   circleTapEvent(e) {
