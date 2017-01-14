@@ -39,9 +39,6 @@ export class MyMapInnerComponent {
     this.isStrong = false;
   }
 
-  pinchEvent(e) {
-    this.isStrong = false;
-  }
 
   tapEvent(e, n) {
     this.isStrong = false;
