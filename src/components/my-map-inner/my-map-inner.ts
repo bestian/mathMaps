@@ -13,7 +13,8 @@ import { Component, Input} from '@angular/core';
 export class MyMapInnerComponent {
   @Input('focus') school = '%E5%B0%8F%E5%AD%B8%E6%95%B8%E5%AD%B8%E5%9C%B0%E5%9C%96';
   
-  private dataDir = 'http://math.alearn.org.tw/%E5%AD%B8%E7%BF%92%E5%9C%B0%E5%9C%96/';
+  // private dataWebDir = 'http://math.alearn.org.tw/%E5%AD%B8%E7%BF%92%E5%9C%B0%E5%9C%96/';
+  private dataDir = 'assets/img/';
 
   constructor() {
     console.log('Hello MyMapInner Component');
@@ -23,16 +24,14 @@ export class MyMapInnerComponent {
   private dirHs = [0,0,0,0,0,0];
   private dirVs = [0,0,0,0,0,0];
   private isStrong = false;
-  private strongCenter = {x:0, y:0};
   private myTop: number;
   private myLeft: number;
-  private sectionTitles = 
-    ['說明',
-     '數與計算',
-     '數感量感',
-     '幾何推理',
-     '解題策略',
-     '備課要點'];
+  private sectionTitles = ['說明',
+                           '數與計算',
+                           '數感量感',
+                           '幾何推理',
+                           '解題策略',
+                           '備課要點'];
 
 
   circleTapEvent(e) {
