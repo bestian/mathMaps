@@ -22,7 +22,6 @@ export class MyMapInnerComponent {
 
   private taps = [0,0,0,0,0,0];
   private dirHs = [0,0,0,0,0,0];
-  private dirVs = [0,0,0,0,0,0];
   private isStrong = false;
   private myTop: number;
   private myLeft: number;
